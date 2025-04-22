@@ -22,5 +22,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t docker.rihyette.fr/nopaste:latest .
-          docker push docker.rihyette.fr/nopaste:latest
+          docker build -t ${{ secrets.REGISTRY_URL }}/nopaste:latest .
+          docker push ${{ secrets.REGISTRY_URL }}/nopaste:latest
